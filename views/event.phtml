@@ -1,0 +1,167 @@
+<header>
+    <div class="container">
+        <div class="flex">
+            <a class="layout-header__authentication-link" href="/">
+                <div class="logo">
+                    <img src="/assets/icons/aclogo.png" alt="logo" class="logo_img">
+                </div>
+            </a>
+            <a class="layout-header__authentication-link" href="/courses">
+                <div class="courses">
+                    <img src="/assets/icons/acallcourses.png" alt="courses" class="courses_img">
+                    <div class="text_header">Все курсы</div>
+                </div>
+            </a>
+            <a class="layout-header__authentication-link" href="/events">
+                <div class="text_header">Мероприятия</div>
+            </a>
+            <div class="text_header">Базы знаний</div>
+            <div class="text_header">Карьера</div>
+            <div class="city">
+                <img src="/assets/icons/accity.png" alt="icon of city" class="city_img">
+                <div id="line_city" class="text_header">Нижний Новгород</div>
+                <img src="/assets/icons/down.png" alt="down" class="down_img">
+            </div>
+            <div class="text_header">8 800 950-33-98</div>
+            <a class="layout-header__authentication-link" href="/login">
+                <div class="signin">
+                    <img src="/assets/icons/acsignin.png" alt="icon of sign in" class="signin_img">
+                    <div class="text_header">
+                        <?php if ($this->user): ?>
+                            <div class="text_header">Выйти</div>
+                        <?php else: ?>
+                            <div class="text_header">Войти</div>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</header>
+
+<section class="event">
+    <div class="container">
+        <div class="chess_text">
+            <h1>Название мероприятия</h1>
+            <h2>Подпись к названию</h2>
+            <div class="flex_description">
+                <div class="box">Узнайте самые востребованные профессии, на которые более 113 тысяч вакансий</div>
+                <div class="box">Выберите подходящую именно для вас</div>
+                <div class="box">Сделайте первые шаги к возможности выйти на доход более 100 тысяч рублей</div>
+            </div>
+            <div class="advice">Запишись сейчас</div>
+            <button class="sign_up">Записаться на интенсив</button>
+        </div>
+    </div>
+</section>
+
+<section class="main">
+    <div class="container">
+        <div class="owl_speak">
+            <div class="owl_text">
+                <div class="text1">Текст, призывающий записаться
+                    на мероприятие</div>
+            </div>
+            <img src="/assets/img/union_chess.png" alt="dialog icon" class="dialog_icon">
+            <img src="/assets/img/owl.png" alt="owl" class="owl">
+            <img src="/assets/img/union_mob.png" alt="dialog icon" class="dialog_icon_mob">
+            <img src="/assets/img/owl_mob.png" alt="owl" class="owl_mob">
+        </div>
+
+        <div class="points">
+            <div class="point">
+                <img src="/assets/img/cross_event.png" alt="cross">
+                <div class="number_of_points">Заголовок</div>
+                <div class="text_of_points">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce mi elit, egestas ut feugiat id, laoreet volutpat risus. Cras condimentum, ligula eget</div>
+            </div>
+            <div class="point">
+                <img src="/assets/img/circle_event.png" alt="cross">
+                <div class="number_of_points">Заголовок</div>
+                <div class="text_of_points">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce mi elit, egestas ut feugiat id, laoreet volutpat risus. Cras condimentum, ligula eget</div>
+            </div>
+            <div class="point">
+                <img src="/assets/img/triangle_event.png" alt="cross">
+                <div class="number_of_points">Заголовок</div>
+                <div class="text_of_points">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce mi elit, egestas ut feugiat id, laoreet volutpat risus. Cras condimentum, ligula eget</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="conduction">
+    <div class="container">
+        <div class="title_conduction">Мероприятие проводят</div>
+        <div class="teachers">
+            <div class="teacher">
+                <div class="photo-wr">
+                    <img src="/assets/img/photo1.png" alt="photo" class="photo">
+                </div>
+                <div class="names_teacher">Имя Фамилия</div>
+                <div class="text_of_teacher">Выпускница Гарвардского Университета.
+                    Более 10 лет играет в шахматы
+                    и участвует в турнирах.</div>
+            </div>
+            <div class="teacher">
+                <div class="photo-wr">
+                    <img src="/assets/img/photo2.png" alt="photo" class="photo"></div>
+                <div class="names_teacher">Имя Фамилия</div>
+                <div class="text_of_teacher">Выпускница Гарвардского Университета.
+                    Более 10 лет играет в шахматы
+                    и участвует в турнирах.</div>
+            </div>
+            <div class="teacher">
+                <div class="photo-wr">
+                    <img src="/assets/img/photo3.png" alt="photo" class="photo"></div>
+                <div class="names_teacher">Имя Фамилия</div>
+                <div class="text_of_teacher">Выпускница Гарвардского Университета.
+                    Более 10 лет играет в шахматы
+                    и участвует в турнирах.</div>
+            </div>
+            <div class="teacher">
+                <div class="photo-wr">
+                    <img src="/assets/img/photo4.png" alt="photo" class="photo"></div>
+                <div class="names_teacher">Имя Фамилия</div>
+                <div class="text_of_teacher">Выпускница Гарвардского Университета.
+                    Более 10 лет играет в шахматы
+                    и участвует в турнирах.</div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<section class="photos">
+    <div class="container">
+        <div class="title_photos">Фотографии с прошлых мероприятий</div>
+        <div class="text_photos">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce mi elit, egestas ut feugiat id, laoreet volutpat risus. Cras condimentum, ligula eget varius eleifend, massa nibh imperdiet est, vel sagittis quam justo.</div>
+        <div class="students">
+            <img src="/assets/img/photo5.png" alt="photo" class="photo_event">
+            <img src="/assets/img/photo6.png" alt="photo" class="photo_event">
+            <img src="/assets/img/photo7.png" alt="photo" class="photo_event">
+            <img src="/assets/img/photo8.png" alt="photo" class="photo_event">
+            <img src="/assets/img/photo9.png" alt="photo" class="photo_event">
+            <img src="/assets/img/photo10.png" alt="photo" class="photo_event">
+        </div>
+
+        <div class="help_with_choice">
+            <div class="owl_speak_in_footer">
+                <div class="owl_text_in_footer">
+                    <div class="text1_in_footer">Помочь с выбором?</div>
+                    <div class="text2_in_footer">Оставьте заявку и наши специалисты свяжутся с вами, ответят на все вопросы и подберут подходящий вариант обучения.</div>
+                </div>
+                <img src="/assets/img/union_footer.png" alt="dialog icon" class="dialog_icon_in_footer">
+                <img src="/assets/img/owl_footer.png" alt="owl" class="owl_in_footer">
+                <img src="/assets/img/owl_footer_mob.png" alt="owl" class="owl_in_footer_mob">
+                <img src="/assets/img/union_footer_mob.png" alt="dialog icon" class="dialog_icon_in_footer_mob">
+            </div>
+            <div class="contact_form">
+                <div class="input">
+                    <div class="name_input">Ваше имя</div>
+                    <div class="phone">Ваш телефон</div>
+                    <div class="email">Ваш e-mail</div>
+                    <div class="policy">Нажимая на кнопку, я соглашаюсь на обработку персональных данных и с правилами пользования Платформой</div>
+                    <button class="send">Отправить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

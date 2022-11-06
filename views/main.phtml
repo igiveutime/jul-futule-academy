@@ -1,0 +1,100 @@
+<?php
+/**
+ * @var $this \App\Blocks\View
+ */
+?>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ХОД Future Academy</title>
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="/assets/css/fonts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <?php if ($stylesUrl = $this->getStylesUrl()): ?>
+        <link rel="stylesheet" href="<?= $stylesUrl ?>">
+    <?php endif; ?>
+</head>
+<body>
+<?php $this->renderTemplate(); ?>
+<footer>
+    <div class="container">
+        <div class="footer-columns">
+            <div class="footer-column" id="first_column">
+                <ul>
+                    <li class="logo_in_footer"><img src="/assets/icons/logo_in_footer.png" alt="logo"></li>
+                    <li class="contact_number">8 800 950-33-98</li>
+                    <li class="contact">г. Москва, ул. Ленина, д. 50</li>
+                    <li class="contact">info@hodfutureacademy.ru</li>
+                    <li>
+                        <div class="social">
+                            <img src="/assets/icons/vk.png" alt="vk">
+                            <img src="/assets/icons/insta.png" alt="instagram">
+                            <img src="/assets/icons/facebook.png" alt="facebook">
+                            <img src="/assets/icons/youtube.png" alt="youtube">
+                            <img src="/assets/icons/telegram.png" alt="telegram">
+                        </div>
+
+                        <div class="social_mob">
+                            <img src="/assets/icons/vk_mob.png" alt="vk">
+                            <img src="/assets/icons/insta_mob.png" alt="instagram">
+                            <img src="/assets/icons/facebook_mob.png" alt="facebook">
+                            <img src="/assets/icons/youtube_mob.png" alt="youtube">
+                            <img src="/assets/icons/telegram_mob.png" alt="telegram">
+                        </div>
+                    </li>
+                    <li class="yandex"><img src="/assets/icons/yandex.png" alt="yandex"></li>
+                    <li class="signature">© ХОД, Future Academy</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <ul>
+                    <li class="li_tittle">Детям</li>
+                    <li><a href="#">Робототехника</a></li>
+                    <li><a href="#">Создание игр</a></li>
+                    <li><a href="#">Программирование</a></li>
+                    <li><a href="#">Мультимедиа</a></li>
+                    <li><a href="#">Soft skills</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <ul>
+                    <li class="li_tittle">Подросткам</li>
+                    <li><a href="#">Web-разработка</a></li>
+                    <li><a href="#">Прикладное программирование</a></li>
+                    <li><a href="#">Графическое моделирование</a></li>
+                    <li><a href="#">Game Development</a></li>
+                    <li><a href="#">Soft skills</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <ul>
+                    <li class="li_tittle">Взрослым</li>
+                    <li><a href="#">Разработчик игр на Unity</a></li>
+                    <li><a href="#">Разработка ПО</a></li>
+                    <li><a href="#">Графический Дизайн</a></li>
+                    <li><a href="#">Тестировщик ПО</a></li>
+                    <li><a href="#">Интернет Маркетинг</a></li>
+                    <li><a href="#">Java-разработчик</a></li>
+                    <li><a href="#">Python–разработчик</a></li>
+                    <li><a href="#">IOS-разработчик</a></li>
+                    <li><a href="#">Программирование</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <ul>
+                    <li class="li_tittle">Информация</li>
+                    <li><a href="#">Об академии</a></li>
+                    <li><a href="#">Мероприятия</a></li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">База знаний</a></li>
+                    <li><a href="#">Карьера</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

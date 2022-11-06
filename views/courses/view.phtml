@@ -1,0 +1,187 @@
+<?php
+/**
+ * @var $this \App\Blocks\Courses\ViewBlock
+ */
+
+$course = $this->getById($this->getId());
+?>
+
+<header>
+    <div class="container">
+        <div class="flex">
+            <a class="layout-header__authentication-link" href="/">
+                <div class="logo">
+                    <img src="/assets/icons/aclogo.png" alt="logo" class="logo_img">
+                </div>
+            </a>
+            <a class="layout-header__authentication-link" href="/courses">
+                <div class="courses">
+                    <img src="/assets/icons/acallcourses.png" alt="courses" class="courses_img">
+                    <div class="text_header">Все курсы</div>
+                </div>
+            </a>
+            <a class="layout-header__authentication-link" href="/events">
+                <div class="text_header">Мероприятия</div>
+            </a>
+            <div class="text_header">Базы знаний</div>
+            <div class="text_header">Карьера</div>
+            <div class="city">
+                <img src="/assets/icons/accity.png" alt="icon of city" class="city_img">
+                <div id="line_city" class="text_header">Нижний Новгород</div>
+                <img src="/assets/icons/down.png" alt="down" class="down_img">
+            </div>
+            <div class="text_header">8 800 950-33-98</div>
+            <a class="layout-header__authentication-link" href="/login">
+                <div class="signin">
+                    <img src="/assets/icons/acsignin.png" alt="icon of sign in" class="signin_img">
+                    <div class="text_header">
+                        <?php if ($this->user): ?>
+                            <div class="text_header">Выйти</div>
+                        <?php else: ?>
+                            <div class="text_header">Войти</div>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</header>
+
+<section class="chess">
+    <div class="container">
+        <div class="chess_text">
+            <h1><?php echo $course->getShortTitle();?></h1>
+            <h2><?php echo $course->getShortDescription();?></h2>
+            <div class="flex_description">
+                <div class="first_box">Срок обучения:<br/> <?php echo $course->getTrainingPeriod();?> лет</div>
+                <div class="second_box">Режим занятий:<br/>  <?php echo $course->getScheduleDays();?> раза в неделю по <?php echo $course->getScheduleHours();?>  академических часа</div>
+                <div class="third_box">от <?php echo $course->getPrice();?> ₽ в месяц</div>
+            </div>
+            <?php if ($this->user): ?>
+                <?php if ($this->isUserSubscribed()): ?>
+                    <button class="sign_up" onclick="location.href = '/courses/unsubscribe?id=<?php echo $this->getId()?>'">Отменить подписку на курс</button>
+                <?php else: ?>
+                    <button class="sign_up" onclick="location.href = '/courses/subscribe?id=<?php echo $this->getId()?>'">Записаться на курс</button>
+                <?php endif; ?>
+            <?php else: ?>
+                <button class="sign_up" onclick="location.href = '/login'">Записаться на курс</button>
+            <?php endif; ?>
+        </div>
+    </div>
+</section>
+
+<section class="main">
+    <div class="container">
+        <div class="owl_speak">
+            <div class="owl_text">
+                <div class="text1">Вы полюбите шахматы,
+                    <br/>и вам этого будет не хватать всегда!</div>
+            </div>
+            <img src="/assets/img/union_chess.png" alt="dialog icon" class="dialog_icon">
+            <img src="/assets/img/owl.png" alt="owl" class="owl">
+            <img src="/assets/img/union_mob.png" alt="dialog icon" class="dialog_icon_mob">
+            <img src="/assets/img/owl_mob.png" alt="owl" class="owl_mob">
+        </div>
+        <div class="points">
+            <div class="point">
+                <div class="number_of_points">Цель 1</div>
+                <div class="text_of_points"><?php echo $course->getGoal1();?></div>
+            </div>
+            <div class="point">
+                <div class="number_of_points">Цель 2</div>
+                <div class="text_of_points"><?php echo $course->getGoal2();?></div>
+            </div>
+            <div class="point">
+                <div class="number_of_points">Цель 3</div>
+                <div class="text_of_points"><?php echo $course->getGoal3();?></div>
+            </div>
+            <div class="point">
+                <div class="number_of_points">Цель 4</div>
+                <div class="text_of_points"><?php echo $course->getGoal4();?></div>
+            </div>
+        </div>
+        <div class="boy_img" >
+            <img src="/assets/img/chess_boy1.png" alt="boy" class="boy">
+            <img src="/assets/img/play.png" alt="play" class="button_play">
+            <img src="/assets/img/play_mob.png" alt="play" class="button_play_mob">
+        </div>
+        <div class="title_schools"><?php echo $course->getFullTitle();?></div>
+        <div class="description_schools"><?php echo $course->getFullDescription();?></div>
+        <div class="coins">
+            <div class="coins_box">
+                <img src="/assets/icons/coins1.png" alt="img">
+                <div class="text_coins"><?php echo $course->getFeature1();?></div>
+            </div>
+            <div class="coins_box">
+                <img src="/assets/icons/coins2.png" alt="img">
+                <div class="text_coins"><?php echo $course->getFeature2();?></div>
+            </div>
+            <div class="coins_box">
+                <img src="/assets/icons/coins3.png" alt="img">
+                <div class="text_coins"><?php echo $course->getFeature3();?></div>
+            </div>
+            <div class="coins_box">
+                <img src="/assets/icons/coins4.png" alt="img">
+                <div class="text_coins"><?php echo $course->getFeature4();?></div>
+            </div>
+            <div class="coins_box">
+                <img src="/assets/icons/coins5.png" alt="img">
+                <div class="text_coins"><?php echo $course->getFeature5();?></div>
+            </div>
+            <div class="coins_box">
+                <img src="/assets/icons/coins6.png" alt="img">
+                <div class="text_coins"><?php echo $course->getFeature6();?></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sign_in_course">
+        <div class="container">
+            <img src="/assets/icons/logo_all_courses.png" alt="logo" class="logo">
+            <div class="chess_coins">
+                <div class="chess_coin"><?php echo $course->getBenefitLeft();?></div>
+                <div class="chess_coin"><?php echo $course->getBenefitRight();?></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="questions">
+            <div class="question_box">
+                <div class="question_text">Что нужно ребенку для занятий?</div>
+                <img src="/assets/icons/plus.png" alt="plus">
+            </div>
+            <div class="question_box">
+                <div class="question_text">Где можно узнать расписание занятий?</div>
+                <img src="/assets/icons/plus.png" alt="plus">
+            </div>
+            <div class="question_box">
+                <div class="question_text">Что делать, если ребенок пропустит занятие?</div>
+                <img src="/assets/icons/plus.png" alt="plus">
+            </div>
+        </div>
+        <div class="help_with_choice">
+            <div class="owl_speak_in_footer">
+                <div class="owl_text_in_footer">
+                    <div class="text1_in_footer">Запись на курс уже открыта</div>
+                    <div class="text2_in_footer">Оставьте заявку и наши специалисты свяжутся с вами, ответят на все вопросы
+                        и зарегистрируют вас на обучение
+                    </div>
+                </div>
+                <img src="/assets/img/union_footer.png" alt="dialog icon" class="dialog_icon_in_footer">
+                <img src="/assets/img/owl_footer.png" alt="owl" class="owl_in_footer">
+                <img src="/assets/img/owl_footer_mob.png" alt="owl" class="owl_in_footer_mob">
+                <img src="/assets/img/union_footer_mob.png" alt="dialog icon" class="dialog_icon_in_footer_mob">
+            </div>
+            <div class="contact_form">
+                <div class="input">
+                    <div class="name_input">Ваше имя</div>
+                    <div class="phone">Ваш телефон</div>
+                    <div class="email">Ваш e-mail</div>
+                    <div class="policy">Нажимая на кнопку, я соглашаюсь на обработку персональных данных и с правилами пользования Платформой</div>
+                    <button class="send">Отправить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

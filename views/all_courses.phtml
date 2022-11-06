@@ -1,0 +1,253 @@
+<?php
+/**
+ * @var $this \App\Blocks\Courses\ListBlock
+ */
+?>
+
+<header>
+    <div class="container">
+        <div class="flex">
+            <a class="layout-header__authentication-link" href="/">
+                <div class="logo">
+                    <img src="/assets/icons/logo_all_courses.png" alt="logo">
+                </div>
+            </a>
+            <a class="layout-header__authentication-link" href="/">
+                <div class="logo_mob">
+                    <img src="/assets/icons/aclogo.png" alt="logo">
+                </div>
+            </a>
+            <a class="layout-header__authentication-link" href="/courses">
+                <div class="courses">
+                    <img src="/assets/icons/all_courses.png" alt="courses" class="courses_img">
+                    <img src="/assets/icons/acallcourses.png" alt="courses" class="courses_img_mob">
+                    <div class="text_header">Все курсы</div>
+                </div>
+            </a>
+            <a class="layout-header__authentication-link" href="/events">
+                <div class="text_header">Мероприятия</div>
+            </a>
+            <div class="text_header">Базы знаний</div>
+            <div class="text_header">Карьера</div>
+            <div class="city">
+                <img src="/assets/icons/city.png" alt="icon of city" class="city_img">
+                <div id="line_city" class="text_header">Нижний Новгород</div>
+                <img src="/assets/icons/down_all_courses.png" alt="down" class="down_img">
+            </div>
+            <div class="text_header">8 800 950-33-98</div>
+            <a class="layout-header__authentication-link" href="/login">
+                <div class="signin">
+                    <img src="/assets/icons/sign_in.png" alt="icon of sign in" class="signin_img">
+                    <div class="text_header">
+                        <?php if ($this->user): ?>
+                            <div class="text_header">Выйти</div>
+                        <?php else: ?>
+                            <div class="text_header">Войти</div>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</header>
+
+<section>
+    <div class="container">
+        <div class="title">Все программы обучения</div>
+        <div class="border_for_audience">
+            <div class="mini_container">
+                <div class="audience">
+                    <div id="first_box" class="audience_box">
+                        <img src="/assets/icons/children.png" alt="children icon" class="img_audience">
+                        <div class="audience_text">
+                            <div class="name">Дети</div>
+                            <div class="age">8 — 14 лет</div>
+                        </div>
+                    </div>
+                    <div class="audience_box">
+                        <img src="/assets/icons/teenagers.png" alt="teenagers icon" class="img_audience">
+                        <div class="audience_text">
+                            <div class="name">Подростки</div>
+                            <div class="age">14 — 18 лет</div>
+                        </div>
+                    </div>
+                    <div id="third_box" class="audience_box">
+                        <img src="/assets/icons/family.png" alt="adults icon" class="img_audience">
+                        <div class="audience_text">
+                            <div class="name">Взрослые</div>
+                            <div class="age">18 — ∞</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mini_container">
+            <div class="direction">Направление</div>
+            <div class="course">
+                <button class="course_box">Робототехника</button>
+                <button class="course_box">Создание игр</button>
+                <button class="course_box" id="web">Web-разработка</button>
+                <button class="course_box" id="multi">Мультимедиа</button>
+                <?php foreach ($this->getAll() as $course): ?>
+                    <?php if ($course): ?>
+                        <button class="course_box" id="current_course" onclick="location.href = '/courses/course?id=<?php echo $course->getId();?>'">
+                            <?php echo $course->getName();?>
+                        </button>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+                <button class="course_box" id="model">3D-модерирование и дизайн</button>
+                <button class="course_box" id="english">Английский язык</button>
+                <button class="course_box" id="bloging">Блогинг</button>
+                <button class="course_box" id="soft_skills">Soft skills</button>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="card first">
+                <div class="flex_container">
+                    <div class="type_of_card">Программа</div>
+                    <div class="phone_title">
+                        <img src="/assets/icons/phone.png" alt="phone img" class="img_phone">
+                        <div class="titles_card">«Разработка мобильных приложений»</div>
+                    </div>
+                    <div class="description">Разработчик мобильных приложений создаёт приложения, которыми люди ежедневно пользуются
+                        на смартфонах, умных часах и планшетах. </div>
+                    <div class="time">24 месяца</div>
+                </div>
+            </div>
+            <div class="card second">
+                <div class="flex_container">
+                    <div class="type_of_card">Программа</div>
+                    <div class="phone_title">
+                        <img src="/assets/icons/phone.png" alt="phone img" class="img_phone">
+                        <div class="titles_card">«Разработка мобильных приложений»</div>
+                    </div>
+                    <div class="description">Разработчик мобильных приложений создаёт приложения, которыми люди ежедневно пользуются
+                        на смартфонах, умных часах и планшетах. </div>
+                    <div class="time">24 месяца</div>
+                </div>
+                <div class="sale">-10%</div>
+            </div>
+            <div class="card third">
+                <div class="flex_container">
+                    <div class="type_of_card">Программа</div>
+                    <div class="phone_title">
+                        <img src="/assets/icons/phone.png" alt="phone img" class="img_phone">
+                        <div class="titles_card">«Разработка мобильных приложений»</div>
+                    </div>
+                    <div class="description">Разработчик мобильных приложений создаёт приложения, которыми люди ежедневно пользуются
+                        на смартфонах, умных часах и планшетах. </div>
+                    <div class="time">24 месяца</div>
+                </div>
+            </div>
+            <div class="card fourth">
+                <div class="flex_container">
+                    <div class="type_of_card">Программа</div>
+                    <div class="phone_title">
+                        <img src="/assets/icons/phone.png" alt="phone img" class="img_phone">
+                        <div class="titles_card">«Разработка мобильных приложений»</div>
+                    </div>
+                    <div class="description">Разработчик мобильных приложений создаёт приложения, которыми люди ежедневно пользуются
+                        на смартфонах, умных часах и планшетах. </div>
+                    <div class="time">24 месяца</div>
+                </div>
+            </div>
+            <div class="card fifth">
+                <div class="flex_container">
+                    <div class="type_of_card">Программа</div>
+                    <div class="phone_title">
+                        <img src="/assets/icons/phone.png" alt="phone img" class="img_phone">
+                        <div class="titles_card">«Разработка мобильных приложений»</div>
+                    </div>
+                    <div class="description">Разработчик мобильных приложений создаёт приложения, которыми люди ежедневно пользуются
+                        на смартфонах, умных часах и планшетах. </div>
+                    <div class="time">24 месяца</div>
+                </div>
+                <div class="sale">-10%</div>
+            </div>
+            <div class="card sixth">
+                <div class="flex_container">
+                    <div class="type_of_card">Программа</div>
+                    <div class="phone_title">
+                        <img src="/assets/icons/phone.png" alt="phone img" class="img_phone">
+                        <div class="titles_card">«Разработка мобильных приложений»</div>
+                    </div>
+                    <div class="description">Разработчик мобильных приложений создаёт приложения, которыми люди ежедневно пользуются
+                        на смартфонах, умных часах и планшетах. </div>
+                    <div class="time">24 месяца</div>
+                </div>
+                <div class="sale">-10%</div>
+            </div>
+            <div class="card seventh">
+                <div class="flex_container">
+                    <div class="type_of_card">Программа</div>
+                    <div class="phone_title">
+                        <img src="/assets/icons/phone.png" alt="phone img" class="img_phone">
+                        <div class="titles_card">«Разработка мобильных приложений»</div>
+                    </div>
+                    <div class="description">Разработчик мобильных приложений создаёт приложения, которыми люди ежедневно пользуются
+                        на смартфонах, умных часах и планшетах. </div>
+                    <div class="time">24 месяца</div>
+                </div>
+            </div>
+            <div class="card eight">
+                <div class="flex_container">
+                    <div class="type_of_card">Программа</div>
+                    <div class="phone_title">
+                        <img src="/assets/icons/phone.png" alt="phone img" class="img_phone">
+                        <div class="titles_card">«Разработка мобильных приложений»</div>
+                    </div>
+                    <div class="description">Разработчик мобильных приложений создаёт приложения, которыми люди ежедневно пользуются
+                        на смартфонах, умных часах и планшетах. </div>
+                    <div class="time">24 месяца</div>
+                </div>
+            </div>
+            <div class="card ninth">
+                <div class="flex_container">
+                    <div class="type_of_card">Программа</div>
+                    <div class="phone_title">
+                        <img src="/assets/icons/phone.png" alt="phone img" class="img_phone">
+                        <div class="titles_card">«Разработка мобильных приложений»</div>
+                    </div>
+                    <div class="description">Разработчик мобильных приложений создаёт приложения, которыми люди ежедневно пользуются
+                        на смартфонах, умных часах и планшетах. </div>
+                    <div class="time">24 месяца</div>
+                </div>
+            </div>
+            <div class="card tenth">
+                <div class="flex_container">
+                    <div class="type_of_card">Программа</div>
+                    <div class="phone_title">
+                        <img src="/assets/icons/phone.png" alt="phone img" class="img_phone">
+                        <div class="titles_card">«Разработка мобильных приложений»</div>
+                    </div>
+                    <div class="description">Разработчик мобильных приложений создаёт приложения, которыми люди ежедневно пользуются
+                        на смартфонах, умных часах и планшетах. </div>
+                    <div class="time">24 месяца</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="help_with_choice">
+            <div class="owl_speak_in_footer">
+                <div class="owl_text_in_footer">
+                    <div class="text1_in_footer">Помочь с выбором?</div>
+                    <div class="text2_in_footer">Оставьте заявку и наши специалисты свяжутся с вами, ответят на все вопросы и подберут подходящий вариант обучения.</div>
+                </div>
+                <img src="/assets/img/union_footer.png" alt="dialog icon" class="dialog_icon_in_footer">
+                <img src="/assets/img/owl_footer.png" alt="owl" class="owl_in_footer">
+                <img src="/assets/img/owl_footer_mob.png" alt="owl" class="owl_in_footer_mob">
+                <img src="/assets/img/union_footer_mob.png" alt="dialog icon" class="dialog_icon_in_footer_mob">
+            </div>
+            <div class="contact_form">
+                <div class="input">
+                    <div class="name_input">Ваше имя</div>
+                    <div class="phone">Ваш телефон</div>
+                    <div class="email">Ваш e-mail</div>
+                    <div class="policy">Нажимая на кнопку, я соглашаюсь на обработку персональных данных и с правилами пользования Платформой</div>
+                    <button class="send">Отправить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

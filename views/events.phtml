@@ -1,0 +1,208 @@
+<header>
+    <div class="container">
+        <div class="flex">
+            <a class="layout-header__authentication-link" href="/">
+                <div class="logo">
+                    <img src="/assets/icons/logo_all_courses.png" alt="logo">
+                </div>
+            </a>
+            <a class="layout-header__authentication-link" href="/">
+                <div class="logo_mob">
+                    <img src="/assets/icons/aclogo.png" alt="logo">
+                </div>
+            </a>
+            <a class="layout-header__authentication-link" href="/courses">
+                <div class="courses">
+                    <img src="/assets/icons/all_courses.png" alt="courses" class="courses_img">
+                    <img src="/assets/icons/acallcourses.png" alt="courses" class="courses_img_mob">
+                    <div class="text_header">Все курсы</div>
+                </div>
+            </a>
+            <a class="layout-header__authentication-link" href="/events">
+                <div class="text_header">Мероприятия</div>
+            </a>
+            <div class="text_header">Базы знаний</div>
+            <div class="text_header">Карьера</div>
+            <div class="city">
+                <img src="/assets/icons/city.png" alt="icon of city" class="city_img">
+                <div id="line_city" class="text_header">Нижний Новгород</div>
+                <img src="/assets/icons/down_all_courses.png" alt="down" class="down_img">
+            </div>
+            <div class="text_header">8 800 950-33-98</div>
+            <a class="layout-header__authentication-link" href="/login">
+                <div class="signin">
+                    <img src="/assets/icons/sign_in.png" alt="icon of sign in" class="signin_img">
+                    <div class="text_header">
+                        <?php if ($this->user): ?>
+                            <div class="text_header">Выйти</div>
+                        <?php else: ?>
+                            <div class="text_header">Войти</div>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</header>
+
+<section class="events">
+    <div class="container">
+        <div class="transition">
+            <a class="layout-header__authentication-link" href="/">
+                <div class="transition_box">
+                    <div class="text_transition">Главная</div>
+                </div>
+            </a>
+            <div class="transition_box">
+                <img src="/assets/img/arrow_events.png" alt="arrow">
+            </div>
+            <a class="layout-header__authentication-link" href="/events">
+                <div class="transition_box">
+                    <div class="text_transition">Мероприятия</div>
+                </div>
+            </a>
+        </div>
+        <div class="title_events">Все мероприятия</div>
+        <div class="cards">
+            <div class="day_open_door">
+                <div class="day">
+                    <img src="/assets/img/25.png" alt="data"  class="day_number">
+                    <img src="/assets/img/25_mob.png" alt="data"  class="day_number_mob">
+                    <img src="/assets/img/november.png" alt="month" class="month">
+                    <img src="/assets/img/november_mob.png" alt="month" class="month_mob">
+                </div>
+                <div class="name_cards_mob">День открытых дверей</div>
+                <div class="day_text">
+                    <div class="name_cards">День открытых дверей</div>
+                    <div class="text_cards">Приглашаем всех желающих на бесплатную экскурсию в мир востребованных профессий и полезных навыков</div>
+                </div>
+                <a class="layout-header__authentication-link" href="/events/event">
+                    <div class="sign_up">
+                        <div class="sign_up_text">Записаться</div>
+                        <img src="/assets/img/arrow.png" alt="arrow" class="arrow">
+                    </div>
+                </a>
+            </div>
+            <a class="layout-header__authentication-link" href="/events/event">
+                <div class="card first">
+                    <div class="flex_container">
+                        <div class="type_of_card">Встреча</div>
+                        <div class="phone_title">
+                            <img src="/assets/icons/phone.png" alt="phone img" class="img_phone">
+                            <div class="titles_card">Заголовок мероприятия</div>
+                        </div>
+                        <div class="description">Краткий анонс мероприятия в нескольких предложениях. Текст, который будет заинтересовывать пользователя</div>
+                        <div class="time">16 ноября 2021</div>
+                    </div>
+                </div>
+            </a>
+            <a class="layout-header__authentication-link" href="/events/event">
+                <div class="card second">
+                    <div class="flex_container">
+                        <div class="type_of_card">Встреча</div>
+                        <div class="phone_title">
+                            <img src="/assets/icons/phone.png" alt="phone img" class="img_phone">
+                            <div class="titles_card">Заголовок мероприятия</div>
+                        </div>
+                        <div class="description">Краткий анонс мероприятия в нескольких предложениях. Текст, который будет заинтересовывать пользователя</div>
+                        <div class="time">16 ноября 2021</div>
+                    </div>
+                </div>
+            </a>
+            <a class="layout-header__authentication-link" href="/events/event">
+                <div class="card third">
+                    <div class="flex_container">
+                        <div class="type_of_card">Встреча</div>
+                        <div class="phone_title">
+                            <img src="/assets/icons/phone.png" alt="phone img" class="img_phone">
+                            <div class="titles_card">Заголовок мероприятия</div>
+                        </div>
+                        <div class="description">Краткий анонс мероприятия в нескольких предложениях. Текст, который будет заинтересовывать пользователя</div>
+                        <div class="time">16 ноября 2021</div>
+                    </div>
+                </div>
+            </a>
+            <a class="layout-header__authentication-link" href="/events/event">
+                <div class="card fourth">
+                    <div class="flex_container">
+                        <div class="type_of_card">Встреча</div>
+                        <div class="phone_title">
+                            <img src="/assets/icons/phone.png" alt="phone img" class="img_phone">
+                            <div class="titles_card">Заголовок мероприятия</div>
+                        </div>
+                        <div class="description">Краткий анонс мероприятия в нескольких предложениях. Текст, который будет заинтересовывать пользователя</div>
+                        <div class="time">16 ноября 2021</div>
+                    </div>
+                </div>
+            </a>
+            <a class="layout-header__authentication-link" href="/events/event">
+                <div class="card fifth">
+                    <div class="flex_container">
+                        <div class="titles_card">Заголовок мероприятия</div>
+                        <div class="description">Краткий анонс мероприятия в нескольких предложениях. Текст, который будет заинтересовывать пользователя</div>
+                    </div>
+                </div>
+            </a>
+            <a class="layout-header__authentication-link" href="/events/event">
+                <div class="card sixth">
+                    <div class="flex_container">
+                        <div class="type_of_card">Встреча</div>
+                        <div class="phone_title">
+                            <img src="/assets/icons/phone.png" alt="phone img" class="img_phone">
+                            <div class="titles_card">Заголовок мероприятия</div>
+                        </div>
+                        <div class="description">Краткий анонс мероприятия в нескольких предложениях. Текст, который будет заинтересовывать пользователя</div>
+                        <div class="time">16 ноября 2021</div>
+                    </div>
+                </div>
+            </a>
+            <a class="layout-header__authentication-link" href="/events/event">
+                <div class="card seventh">
+                    <div class="flex_container">
+                        <div class="type_of_card">Встреча</div>
+                        <div class="phone_title">
+                            <img src="/assets/icons/phone.png" alt="phone img" class="img_phone">
+                            <div class="titles_card">Заголовок мероприятия</div>
+                        </div>
+                        <div class="description">Краткий анонс мероприятия в нескольких предложениях. Текст, который будет заинтересовывать пользователя</div>
+                        <div class="time">16 ноября 2021</div>
+                    </div>
+                </div>
+            </a>
+            <a class="layout-header__authentication-link" href="/events/event">
+                <div class="card eight">
+                    <div class="flex_container">
+                        <div class="type_of_card">Встреча</div>
+                        <div class="phone_title">
+                            <img src="/assets/icons/phone.png" alt="phone img" class="img_phone">
+                            <div class="titles_card">Заголовок мероприятия</div>
+                        </div>
+                        <div class="description">Краткий анонс мероприятия в нескольких предложениях. Текст, который будет заинтересовывать пользователя</div>
+                        <div class="time">16 ноября 2021</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="help_with_choice">
+            <div class="owl_speak_in_footer">
+                <div class="owl_text_in_footer">
+                    <div class="text1_in_footer">Помочь с выбором?</div>
+                    <div class="text2_in_footer">Оставьте заявку и наши специалисты свяжутся с вами, ответят на все вопросы и подберут подходящий вариант обучения.</div>
+                </div>
+                <img src="/assets/img/union_footer.png" alt="dialog icon" class="dialog_icon_in_footer">
+                <img src="/assets/img/owl_footer.png" alt="owl" class="owl_in_footer">
+                <img src="/assets/img/owl_footer_mob.png" alt="owl" class="owl_in_footer_mob">
+                <img src="/assets/img/union_footer_mob.png" alt="dialog icon" class="dialog_icon_in_footer_mob">
+            </div>
+            <div class="contact_form">
+                <div class="input">
+                    <div class="name_input">Ваше имя</div>
+                    <div class="phone">Ваш телефон</div>
+                    <div class="email">Ваш e-mail</div>
+                    <div class="policy">Нажимая на кнопку, я соглашаюсь на обработку персональных данных и с правилами пользования Платформой</div>
+                    <button class="send">Отправить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,111 @@
+<?php
+/**
+ * @var $this \App\Blocks\View
+ */
+
+use \App\Blocks\HtmlEncoder;
+use App\Models\SessionModel;
+?>
+
+
+<header>
+    <div class="container">
+        <div class="flex">
+            <a class="layout-header__authentication-link" href="/">
+                <div class="logo">
+                    <img src="/assets/icons/logo_all_courses.png" alt="logo">
+                </div>
+            </a>
+            <a class="layout-header__authentication-link" href="/">
+                <div class="logo_mob">
+                    <img src="/assets/icons/aclogo.png" alt="logo">
+                </div>
+            </a>
+            <a class="layout-header__authentication-link" href="/courses">
+                <div class="courses">
+                    <img src="/assets/icons/all_courses.png" alt="courses" class="courses_img">
+                    <img src="/assets/icons/acallcourses.png" alt="courses" class="courses_img_mob">
+                    <div class="text_header">Все курсы</div>
+                </div>
+            </a>
+            <a class="layout-header__authentication-link" href="/events">
+                <div class="text_header">Мероприятия</div>
+            </a>
+            <div class="text_header">Базы знаний</div>
+            <div class="text_header">Карьера</div>
+            <div class="city">
+                <img src="/assets/icons/city.png" alt="icon of city" class="city_img">
+                <div id="line_city" class="text_header">Нижний Новгород</div>
+                <img src="/assets/icons/down_all_courses.png" alt="down" class="down_img">
+            </div>
+            <div class="text_header">8 800 950-33-98</div>
+            <a class="layout-header__authentication-link" href="/login">
+                <div class="signin">
+                    <img src="/assets/icons/sign_in.png" alt="icon of sign in" class="signin_img">
+                    <?php if ($this->user): ?>
+                        <div class="text_header">Выйти</div>
+                    <?php else: ?>
+                        <div class="text_header">Войти</div>
+                    <?php endif; ?>
+                </div>
+            </a>
+        </div>
+    </div>
+</header>
+
+<section class="input">
+    <form class="form" action="/user/login" method="post">
+        <div class="mini_container">
+            <div class="choose">
+                <a href="/login">
+                    <div class="choose_box line_choose">
+                        <div class="text_choose">Войти</div>
+                    </div>
+                </a>
+                <a href="/signin">
+                    <div class="choose_box">
+                        <div class="text_choose">Регистрация</div>
+                    </div>
+                </a>
+            </div>
+            <div class="fields">
+                <input class="name_input" type="text" id="name" name="name"
+                       pattern="[\w]{2,100}" placeholder="Имя">
+                <input class="name_input" type="text" id="login" name="login"
+                       pattern="[\w]{2,100}" placeholder="Логин">
+                <input class="name_input" type="password" id="password" name="password"
+                       pattern="[\w]{2,100}" placeholder="Пароль">
+                <li class="form__item form__item_hidden">
+                    <input class="form__input" type="hidden" name="csrf-token" value="<?= SessionModel::getSessionHash() ?>">
+                </li>
+            </div>
+            <div class="form__messages-panel">
+                <?php foreach (SessionModel::getMessages() as $message): ?>
+                    <div class="form__message">
+                        <?= HtmlEncoder::encodeRow($message) ?>
+                    </div>
+                <?php endforeach;  ?>
+            </div>
+            <div class="input_with_social">Войти с помощью соцсетей:</div>
+            <div class="social_input">
+                <img src="/assets/icons/vk_input.png" alt="vk">
+                <img src="/assets/icons/insta_input.png" alt="instagram">
+                <img src="/assets/icons/facebook_input.png" alt="facebook">
+                <img src="/assets/icons/youtube_input.png" alt="youtube">
+                <img src="/assets/icons/telega_input.png" alt="telegram">
+            </div>
+            <button class="enter" type="submit">Войти</button>
+            <div class="owl_speak">
+                <div class="owl_text">
+                    <div class="text1">Войдите в систему
+                        или зарегистрируйтесь,
+                        если у вас ещё нет аккаунта</div>
+                </div>
+                <img src="/assets/img/union_chess.png" alt="dialog icon" class="dialog_icon">
+                <img src="/assets/img/owl.png" alt="owl" class="owl">
+                <img src="/assets/img/union_mob.png" alt="dialog icon" class="dialog_icon_mob">
+                <img src="/assets/img/owl_mob.png" alt="owl" class="owl_mob">
+            </div>
+        </div>
+    </form>
+</section>
